@@ -123,7 +123,7 @@ module Sablon
 
       class InlineParagraphBlock < Block
         def self.encloses?(start_field, end_field)
-          super && parent(start_field) == parent(end_field)
+          parent(start_field) == parent(end_field)
         end
 
         def remove_control_elements
